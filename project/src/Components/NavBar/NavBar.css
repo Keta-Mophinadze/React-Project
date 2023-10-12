@@ -1,0 +1,30 @@
+.headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+.headerWrapper h2 {
+    color: var(--second);
+    font-size: 1.5rem;
+}
+.nav {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins";
+    font-size: 1.09rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.105rem;
+}
+.navLink {
+    color: var(--second);
+}
+.active {
+    color: var(--third);
+}
+
+
