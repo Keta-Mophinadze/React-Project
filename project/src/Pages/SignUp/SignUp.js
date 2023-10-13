@@ -78,7 +78,7 @@ const SignUp = () => {
           {isPending && (
             <div className="loaderContainer">
               <h2>
-                <BarLoader color="#ffffff" />
+                <BarLoader color="#EBCD23" />
               </h2>
             </div>
           )}
