@@ -1,0 +1,29 @@
+.accordion {
+    color: var(--second);
+    max-width: 1000px;
+    width: 100%;
+}
+.item {
+    background: var(--fourth);
+    padding: 15px 40px;
+    margin-bottom: 20px;
+    line-height: 27px;
+}
+
+
+@media (max-width: 320px) {
+    .faqWrapper h2 {
+        font-size: 14px;
+    }
+    .faqWrapper h3 {
+        font-size: 16px;
+    }
+    .faqWrapper p {
+        font-size: 15px;
+    }
+    .item {
+        padding: 10px 20px;
+    }
+}
+
+

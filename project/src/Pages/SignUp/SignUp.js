@@ -4,6 +4,7 @@ import "./SignUp.css";
 import { Link, useNavigate } from "react-router-dom";
 import { BarLoader } from "react-spinners";
 import { SignUpFetch } from "../../API/Auth";
+import CookieConsent from "react-cookie-consent";
 
 const SignUp = () => {
   const [user, setUser] = useState({
@@ -38,6 +39,22 @@ const SignUp = () => {
   };
   return (
     <div className="SignUpWrapper">
+      <CookieConsent
+        location="top"
+        expires={182}
+        style={{ background: "#00111d" }}
+        buttonText="Gotcha!"
+        buttonStyle={{
+          color: "#00192a",
+          background: "#EBCD23",
+          fontSize: "13px",
+          border: "none",
+          borderRadius: "2px",
+        }}
+      >
+        We use cookies to ensure you get the best experience on our website.
+      </CookieConsent>
+
       <h3>Sign Up</h3>
       <div>
         <form>

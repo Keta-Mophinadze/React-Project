@@ -1,8 +1,8 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -22,7 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 a {
   text-decoration: none;
 }
@@ -33,5 +33,10 @@ a {
   --first: #00192a;
   --second: #CCCCCC;
   --third: #EBCD23; 
+  --fourth: #001321;
+  --hover: #d3b81f;
+}
+body {
+  font-family: "Poppins";
 }
 

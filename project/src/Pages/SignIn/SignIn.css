@@ -2,13 +2,13 @@
     max-width: 320px;
     width: 100%;
     margin: 0 auto;
-    font-family: "Poppins";
     color: var(--second);
+    text-align: center;
 }
 .icon {
     width: 100%;
     height: 40px;
-    background: #001321;
+    background: var(--fourth);
     margin-bottom: 15px;
     display: flex;
     justify-content: center;
@@ -34,10 +34,10 @@
     width: 40%;
 }
 .pTag p:before {
-    right: 0.625rem;
-    margin-left: -50%;
+    right: 14px;
+  
 }
 .pTag p:after {
-    left: 0.625rem;
-    margin-right: -50%;
+    left: 14px;
 }
+
