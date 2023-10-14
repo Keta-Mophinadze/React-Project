@@ -10,6 +10,9 @@ const NavBar = () => {
         <NavLink className={"navLink"} to={Path.Home}>
           Home
         </NavLink>
+        <NavLink className={"navLink"} to={Path.Review}>
+          Review
+        </NavLink>
         <NavLink className={"navLink"} to={Path.Help_Center}>
           Help
         </NavLink>
