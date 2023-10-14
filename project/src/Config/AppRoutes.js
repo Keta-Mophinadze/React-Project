@@ -1,4 +1,5 @@
 import Path from "../Constants/Path";
+import Detail from "../Pages/Detail/Detail";
 import HelpCenter from "../Pages/HelpCenter/HelpCenter";
 import Home from "../Pages/Home/Home";
 import Review from "../Pages/Review/Review";
@@ -25,6 +26,10 @@ const AppRoutes = [
   {
     path: Path.Review,
     Component: Review,
+  },
+  {
+    path: Path.ReviewDetail,
+    Component: Detail,
   },
 ];
 

@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ReviewComponent from "../../Components/ReviewComponent/ReviewComponent";
 import { useAppContext } from "../../Context/Provider";
-import { BarLoader } from "react-spinners";
+import { fetchItems } from "../../API/Items";
+import {
+  startPending,
+  receivedData,
+  itemFetchError,
+} from "../../Context/ActionCreators";
 
 const Review = () => {
-  const {
-    state: { items, itemFetching, itemFetchingError },
-    // eslint-disable-next-line no-unused-vars
-    dispatch,
-  } = useAppContext();
+  const { dispatch } = useAppContext();
+
+  useEffect(() => {
+    dispatch(startPending());
+
+    fetchItems()
+      .then((data) => {
+        dispatch(receivedData(data));
+      })
+
+      .catch((err) => {
+        dispatch(itemFetchError(err.message));
+      });
+  }, []);
+
   return (
     <div>
-      {itemFetching && <BarLoader color="#36d7b7" />}
-      {itemFetchingError && <h1>404: {itemFetchingError}</h1>}
-      <pre>{JSON.stringify(items, null, 2)}</pre>
+      <ReviewComponent />
     </div>
   );
 };

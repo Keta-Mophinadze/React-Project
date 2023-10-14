@@ -9,7 +9,11 @@ export const initialState = {
 export const AppReducer = (state, action) => {
   switch (action.type) {
     case AppContextActions.fetchReceivedData: {
-      return { ...state, items: action.payload, itemFetching: false };
+      return {
+        ...state,
+        items: action.payload,
+        itemFetching: false,
+      };
     }
     case AppContextActions.startPending: {
       return { ...state, itemFetching: true };

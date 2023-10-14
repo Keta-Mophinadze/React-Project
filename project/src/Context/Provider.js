@@ -1,23 +1,10 @@
-import React, { createContext, useContext, useEffect, useReducer } from "react";
+import React, { createContext, useContext, useReducer } from "react";
 import { AppReducer, initialState } from "./Reducer";
-import { fetchItems } from "../API/Items";
-import { itemFetchError, receivedData, startPending } from "./ActionCreators";
 
 const AppContext = createContext();
 
 const Provider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
-
-  useEffect(() => {
-    dispatch(startPending());
-    fetchItems()
-      .then((data) => {
-        dispatch(receivedData(data));
-      })
-      .catch((err) => {
-        dispatch(itemFetchError(err.message));
-      });
-  }, []);
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
