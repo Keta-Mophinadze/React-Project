@@ -1,0 +1,41 @@
+.imageWrapper{
+    background-image: url(../../Image/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 20%;
+    width: 100%;
+    height: 470px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.imageWrapper h1 {
+    color: var(--third);
+    text-align: center;
+    font-size: 65px;
+}
+.emailWrapper {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.emailWrapper p {
+    color: var(--second);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.emailWrapper a {
+    color: var(--second);
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+    margin-top: 5px;
+  }
+  
+  .emailWrapper a:hover {
+    border-color: var(--third);
+  }
