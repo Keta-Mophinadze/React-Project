@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: stretch;
     gap: 20px;
+    padding: 40px;
 }
 .reviewCard {
     max-width: 380px;
@@ -31,6 +32,9 @@
     color: var(--second);
     cursor: pointer;
 }
+.reviewCard h4 {
+    color: var(--second);
+}
 .reviewWrapper button {
     width: 75px;
     height: 26px;
@@ -41,3 +45,33 @@
     background: var(--third);
     cursor: pointer;
 }
+.loadMoreBtn  {
+    width: 150px;
+    margin: 0 auto;
+}
+.loadMoreBtn button {
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background: var(--third);
+    color: var(--fourth);
+    cursor: pointer;
+    font-size: 15px;
+}
+@media (max-width: 768px) {
+    .reviewWrapper {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    }
+    .reviewCard {
+        margin: 0 auto;
+    }
+}
+@media (max-width: 480px) {
+    .reviewCard  {
+        width: 90%;
+    }
+  
+
+}
+

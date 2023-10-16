@@ -13,4 +13,3 @@ export async function fetchItems() {
   }
   throw new Error("404: Failed to fetch data!");
 }
-
