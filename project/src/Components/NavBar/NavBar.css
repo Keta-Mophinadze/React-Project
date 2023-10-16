@@ -23,6 +23,9 @@
 .navLink {
     color: var(--second);
 }
+.navLink:hover {
+    color: var(--third);
+}
 .active {
     color: var(--third);
 }
@@ -65,8 +68,6 @@
         position: absolute;
         top: 2rem;
         right: 2rem;
-
-
     }
 }
 @media (max-width: 320px) {
