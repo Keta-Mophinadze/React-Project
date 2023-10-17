@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <header>
       <div className="headerWrapper">
-        <h2>Mubi</h2>
+        <h2>Cinephile</h2>
         <nav ref={navRef} className="nav">
           <NavLink className={"navLink"} to={Path.Home}>
             Home
