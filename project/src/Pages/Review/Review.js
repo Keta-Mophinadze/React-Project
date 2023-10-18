@@ -18,7 +18,6 @@ const Review = () => {
       .then((data) => {
         dispatch(receivedData(data));
       })
-
       .catch((err) => {
         dispatch(itemFetchError(err.message));
       });

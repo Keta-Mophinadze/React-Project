@@ -1,16 +1,33 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useReducer,
+} from "react";
 import { AppReducer, initialState } from "./Reducer";
+import { signInAction } from "./ActionCreators";
+import { validToken } from "../Utility/Utility";
 
 const AppContext = createContext();
 
 const Provider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  return (
-    <AppContext.Provider value={{ state, dispatch }}>
-      {children}
-    </AppContext.Provider>
-  );
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+    if (token && validToken(token)) {
+      dispatch(signInAction(token));
+    }
+  }, []);
+
+  const AppState = useMemo(() => {
+    return {
+      state,
+      dispatch,
+    };
+  }, [state]);
+  return <AppContext.Provider value={AppState}>{children}</AppContext.Provider>;
 };
 
 export const useAppContext = () => {

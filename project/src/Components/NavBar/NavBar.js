@@ -3,9 +3,13 @@ import Path from "../../Constants/Path";
 import "./NavBar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useRef } from "react";
+import { useAppContext } from "../../Context/Provider";
 
 const NavBar = () => {
   const navRef = useRef();
+  const {
+    state: { isUserLoggedIn },
+  } = useAppContext();
 
   const showNavBar = () => {
     navRef.current.classList.toggle("responsive_nav");
@@ -24,9 +28,17 @@ const NavBar = () => {
           <NavLink className={"navLink"} to={Path.Help_Center}>
             Help
           </NavLink>
-          <NavLink className={"navLink"} to={Path.Sign_Up}>
-            Sign Up
-          </NavLink>
+          {!isUserLoggedIn && (
+            <NavLink className={"navLink"} to={Path.Sign_Up}>
+              Sign Up
+            </NavLink>
+          )}
+
+          {isUserLoggedIn && (
+            <NavLink className={"navLink"} to={Path.Sign_Out}>
+              Sign Out
+            </NavLink>
+          )}
           <button className="nav-btn nav-close-btn" onClick={showNavBar}>
             <FaTimes />
           </button>

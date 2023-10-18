@@ -1,9 +1,12 @@
+import { parseToken, toggleStorage } from "../Utility/Utility";
 import AppContextActions from "./Actions";
 
 export const initialState = {
   items: [],
   itemFetching: false,
   itemFetchingError: null,
+  isUserLoggedIn: false,
+  user: {},
 };
 
 export const AppReducer = (state, action) => {
@@ -20,6 +23,25 @@ export const AppReducer = (state, action) => {
     }
     case AppContextActions.itemFetchError: {
       return { ...state, itemFetchError: action.payload, itemFetching: false };
+    }
+    case AppContextActions.Sign_In: {
+      const token = action.payload;
+      const user = parseToken(token);
+      toggleStorage(token);
+      return {
+        ...state,
+        isUserLoggedIn: true,
+        user,
+      };
+    }
+
+    case AppContextActions.Sign_Out: {
+      toggleStorage();
+      return {
+        ...state,
+        isUserLoggedIn: false,
+        user: {},
+      };
     }
 
     default:

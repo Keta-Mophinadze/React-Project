@@ -19,3 +19,16 @@ export function itemFetchError(payload) {
     payload,
   };
 }
+
+export function signInAction(payload) {
+  return {
+    type: AppContextActions.Sign_In,
+    payload,
+  };
+}
+
+export function signOut() {
+  return {
+    type: AppContextActions.Sign_Out,
+  };
+}

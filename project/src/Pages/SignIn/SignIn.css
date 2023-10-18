@@ -5,6 +5,12 @@
     color: var(--second);
     text-align: center;
 }
+.congratsText {
+    color: var(--third);
+    line-height: 30px;
+
+
+}
 .icon {
     width: 100%;
     height: 40px;

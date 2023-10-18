@@ -24,7 +24,8 @@ const SignUp = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const signUpHandler = () => {
+  const signUpHandler = (e) => {
+    e.preventDefault();
     setIsPending(true);
     SignUpFetch(user)
       .then(() => {
