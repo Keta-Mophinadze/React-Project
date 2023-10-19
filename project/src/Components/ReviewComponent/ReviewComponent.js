@@ -18,7 +18,7 @@ const ReviewComponent = () => {
   const [visible, setVisible] = useState(9);
 
   const showMoreItems = () => {
-    setVisible((prev) => prev + 9);
+    setVisible((prev) => prev + 3);
   };
 
   return (

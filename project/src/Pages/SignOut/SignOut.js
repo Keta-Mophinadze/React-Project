@@ -1,4 +1,4 @@
-import React from "react";
+import "./SignOut.css";
 import { useAppContext } from "../../Context/Provider";
 import { signOut } from "../../Context/ActionCreators";
 import { useNavigate } from "react-router-dom";
@@ -8,15 +8,15 @@ const SignOut = () => {
   const { dispatch } = useAppContext();
   const navigate = useNavigate();
   return (
-    <div>
-      <h1>Log Out</h1>
+    <div className="signOutWrapper">
+      <h3>Would you like to leave the page?</h3>
       <button
         onClick={() => {
           dispatch(signOut());
           navigate(Path.Sign_In);
         }}
       >
-        Log out
+        Sign Out
       </button>
     </div>
   );
