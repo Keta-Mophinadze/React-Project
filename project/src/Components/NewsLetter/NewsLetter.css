@@ -18,7 +18,6 @@
     letter-spacing: 0.5px;
     line-height: 27px;
 }
-
 .newLetterEmail form {
     max-width: 500px;
     width: 100%;
@@ -26,7 +25,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .newLetterEmail input {
     outline: none;
@@ -49,25 +47,22 @@
 .newLetterEmail button:hover {
     background: var(--hover);
 }
+
 @media (max-width: 480px) {
     .newLetterEmail form {
         flex-direction: column;
-       
     }
     .newLetterEmail input {
         border-radius: 3px;
-
     }
     .newLetterEmail button {
         border-radius: 3px;
         margin-top: 10px;
     }
-
 }
+
 @media (max-width: 320px) {
     .newsLetterWrapper {
         padding: 25px;
     }
-    
-
 }

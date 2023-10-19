@@ -11,9 +11,7 @@ const AuthGuard = ({ children }) => {
   if (!isUserLoggedIn) {
     return (
       <div>
-        <Navigate to={Path.Sign_In} />
-        <h1>Please, sign in first to have access.</h1>
-        {/* I can not see this */}
+        <Navigate to={Path.Sign_Up} state={{ from: "review" }} />
       </div>
     );
   }

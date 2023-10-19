@@ -4,7 +4,6 @@
     margin: 0 auto;
     text-align: center;
     padding: 30px;
-    
 }
 .errorWrapper h1 {
     color: #990000;
@@ -30,6 +29,5 @@
     }
     .errorWrapper p {
         font-size: 18px;
-    }
-    
+    } 
 }

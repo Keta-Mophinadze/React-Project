@@ -1,12 +1,15 @@
 import { useState } from "react";
 import Path from "../../Constants/Path";
 import "./SignUp.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BarLoader } from "react-spinners";
 import { SignUpFetch } from "../../API/Auth";
-import CookieConsent from "react-cookie-consent";
 
 const SignUp = () => {
+  const location = useLocation();
+
+  const isFromReview = location.state && location.state.from === "review";
+
   const [user, setUser] = useState({
     userName: "",
     email: "",
@@ -40,21 +43,9 @@ const SignUp = () => {
   };
   return (
     <div className="SignUpWrapper">
-      <CookieConsent
-        location="top"
-        expires={182}
-        style={{ background: "#00111d" }}
-        buttonText="Gotcha!"
-        buttonStyle={{
-          color: "#00192a",
-          background: "#EBCD23",
-          fontSize: "13px",
-          border: "none",
-          borderRadius: "2px",
-        }}
-      >
-        We use cookies to ensure you get the best experience on our website.
-      </CookieConsent>
+      {isFromReview && (
+        <h1>Registration is required for access. Please, sign up.</h1>
+      )}
 
       <h3>Sign Up</h3>
       <div>
@@ -100,7 +91,7 @@ const SignUp = () => {
               </h2>
             </div>
           )}
-          {error && <h2>404: {error}</h2>}
+          {error && <h2>{error}</h2>}
 
           <button onClick={signUpHandler} className="SignUpBTN">
             Sign Up

@@ -3,6 +3,12 @@
     width: 100%;
     margin: 0 auto;
 }
+.SignUpWrapper h1 {
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+    color: var(--third);
+}
 .SignUpWrapper h3 {
     color: var(--second);
     font-size: 25px;

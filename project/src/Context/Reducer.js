@@ -34,7 +34,6 @@ export const AppReducer = (state, action) => {
         user,
       };
     }
-
     case AppContextActions.Sign_Out: {
       toggleStorage();
       return {

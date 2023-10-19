@@ -1,5 +1,5 @@
-const Sign_Up = "/";
-const Home = "/home";
+const Home = "/";
+const Sign_Up = "/sign_up";
 const Sign_In = "/sign_in";
 const Help_Center = "/help_center";
 const Review = "/review";
@@ -8,8 +8,8 @@ const Page_Not_Found = "*";
 const Sign_Out = "/sign_out";
 
 const Path = {
-  Sign_Up,
   Home,
+  Sign_Up,
   Sign_In,
   Help_Center,
   Review,

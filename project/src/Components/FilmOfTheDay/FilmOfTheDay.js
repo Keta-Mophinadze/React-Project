@@ -43,9 +43,9 @@ const FilmOfTheDay = () => {
     <div className="dailyFilmWrapper">
       <h1>Film Highlight of the Day</h1>
       {selectedFilm && (
-        <div key={selectedFilm.id}>
+        <div>
           <div>
-            <img src={selectedFilm.url} alt="film" />
+            <img src={selectedFilm.url} alt="film of the day" />
           </div>
           <h2>{selectedFilm.title}</h2>
           <p>{selectedFilm.year}</p>

@@ -8,8 +8,6 @@
 .congratsText {
     color: var(--third);
     line-height: 30px;
-
-
 }
 .icon {
     width: 100%;
@@ -40,8 +38,7 @@
     width: 40%;
 }
 .pTag p:before {
-    right: 14px;
-  
+    right: 14px; 
 }
 .pTag p:after {
     left: 14px;

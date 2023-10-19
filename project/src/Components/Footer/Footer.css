@@ -8,7 +8,6 @@
 .Footer hr {
     border: 0.5px solid rgb(66, 66, 66);
     width: 90%;
-
 }
 .footerTitle h3 {
     text-align: center;
@@ -51,6 +50,7 @@
     max-width: 210px;
     margin: 0 auto;
 }
+
 @media (max-width: 480px) {
     .footerWrapper {
         flex-wrap: wrap;
@@ -62,13 +62,12 @@
         flex-direction: row;
         column-gap: 30px;
     }
-
 }
+
 @media (max-width: 320px) {
     .iconDiv  {
         padding-left: 36px;   
         margin: initial;
-    
     }
     .iconDiv div {
         flex-direction: column;

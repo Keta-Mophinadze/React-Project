@@ -9,6 +9,9 @@
     gap: 20px;
     padding: 40px;
 }
+.barLoader {
+    margin: 0 auto;
+}
 .reviewCard {
     max-width: 380px;
     width: 100%;
@@ -36,7 +39,7 @@
     color: var(--second);
 }
 .reviewWrapper button {
-    width: 75px;
+    width: 120px;
     height: 26px;
     border: none;
     border-radius: 2px;
@@ -44,6 +47,9 @@
     color: var(--first);
     background: var(--third);
     cursor: pointer;
+}
+.reviewWrapper button:hover {
+    background: var(--hover);
 }
 .loadMoreBtn  {
     width: 150px;
@@ -59,6 +65,10 @@
     cursor: pointer;
     font-size: 15px;
 }
+.loadMoreBtn button:hover {
+    background: var(--hover);
+}
+
 @media (max-width: 768px) {
     .reviewWrapper {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
@@ -67,11 +77,10 @@
         margin: 0 auto;
     }
 }
+
 @media (max-width: 480px) {
     .reviewCard  {
         width: 90%;
     }
-  
-
 }
 

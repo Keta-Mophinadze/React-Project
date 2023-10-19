@@ -9,8 +9,7 @@ import { signInAction } from "../../Context/ActionCreators";
 import Path from "../../Constants/Path";
 
 const SignIn = () => {
-  // eslint-disable-next-line no-unused-vars
-  const { state, dispatch } = useAppContext();
+  const { dispatch } = useAppContext();
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
@@ -109,7 +108,7 @@ const SignIn = () => {
           </h2>
         </div>
       )}
-      {error && <h2>404: {error}</h2>}
+      {error && <h2>{error}</h2>}
     </div>
   );
 };

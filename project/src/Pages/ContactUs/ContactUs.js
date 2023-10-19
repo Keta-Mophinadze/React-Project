@@ -19,7 +19,6 @@ const ContactUs = () => {
               placeholder="Let us know what you think..."
             ></textarea>
           </div>
-
         </form>
         <button>Submit</button>
       </div>

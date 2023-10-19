@@ -5,7 +5,6 @@
     background-position: 50% 40%;
     transition: background-image 0.5s ease;
     position: relative;
-
 }
 .sliderStyle {
     height: 100%;
@@ -17,7 +16,6 @@
     position: absolute;
     bottom: -8px; 
     width: 100%; 
-  
 }
 .dots {
     cursor: pointer;
@@ -25,21 +23,24 @@
     margin-left: 15px;
     color: var(--second);
 }
+
 @media (max-width: 768px) {
     .sliderBG {
         height: 400px;
     }
-
 }
+
 @media (max-width: 480px) {
     .sliderBG {
         height: 300px;
     }
-
+    .dots {
+        font-size: 40px;
+    }
 }
+
 @media (max-width: 320px) {
     .sliderBG {
         height: 200px;
     }
-
 }

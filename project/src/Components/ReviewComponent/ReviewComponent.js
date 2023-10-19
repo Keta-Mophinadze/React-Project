@@ -23,11 +23,8 @@ const ReviewComponent = () => {
 
   return (
     <div>
+      {itemFetching && <BarLoader className="barLoader" color="#EBCD23" />}
       <div className="reviewWrapper">
-        {itemFetching && (
-          <BarLoader color="#EBCD23" style={{ margin: "0 auto" }} />
-        )}
-
         {itemFetchingError && <h1>404: {itemFetchingError}</h1>}
         {items.slice(0, visible).map((element) => (
           <div className="reviewCard" key={element.id}>

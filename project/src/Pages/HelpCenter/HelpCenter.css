@@ -30,7 +30,6 @@
 }
 .btn-clicked {
     background: var(--third);
-  
 }
 
 @media (max-width: 320px) {
@@ -45,7 +44,6 @@
     }
     .btn {
         margin-bottom: 15px;
-    }
-    
+    } 
 }
   
