@@ -24,9 +24,9 @@ const Review = () => {
   }, []);
 
   return (
-    <div>
+    <section>
       <ReviewComponent />
-    </div>
+    </section>
   );
 };
 

@@ -1,4 +1,4 @@
-// const apiKey = process.env.REACT_APP_API_KEY;
+// const key = process.env.REACT_APP_API_KEY;
 
 export async function fetchItems() {
   const resp = await fetch("https://imdb-top-100-movies.p.rapidapi.com/", {

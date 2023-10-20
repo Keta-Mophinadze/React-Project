@@ -19,38 +19,40 @@ const Slider = () => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [currentIndex]);
 
   return (
-    <div className="sliderStyle">
-      <div
-        className="sliderBG"
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        alt={slides[currentIndex].title}
-      >
-        <div className="dotWrapper">
-          {slides.map((slide, slideIndex) => (
-            <div
-              onClick={() => {
-                goToSlide(slideIndex);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
+    <section>
+      <div className="sliderStyle">
+        <div
+          className="sliderBG"
+          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+          alt={slides[currentIndex].title}
+        >
+          <div className="dotWrapper">
+            {slides.map((slide, slideIndex) => (
+              <div
+                onClick={() => {
                   goToSlide(slideIndex);
-                }
-              }}
-              role="button"
-              tabIndex={0}
-              className="dots"
-              key={slideIndex}
-              aria-label={`Slide ${slideIndex + 1}`}
-            >
-              &#8226;
-            </div>
-          ))}
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    goToSlide(slideIndex);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                className="dots"
+                key={slideIndex}
+                aria-label={`Slide ${slideIndex + 1}`}
+              >
+                &#8226;
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -44,72 +44,74 @@ const SignIn = () => {
 
   const location = useLocation();
   return (
-    <div className="SignUpWrapper">
-      {location?.state?.success && (
-        <p className="congratsText">
-          Congrats! You have successfully joined. Please, sign in.
-        </p>
-      )}
-      <h3>Sign In</h3>
+    <section>
+      <div className="SignUpWrapper">
+        {location?.state?.success && (
+          <p className="congratsText">
+            Congrats! You have successfully joined. Please, sign in.
+          </p>
+        )}
+        <h3>Sign In</h3>
 
-      <div className="iconWrapper">
-        <div className="icon">
-          <span>Continue with </span>
-          <FaGoogle />
-        </div>
-        <div className="icon">
-          <span>Continue with </span>
-          <FaFacebook />
-        </div>
-        <div className="icon">
-          <span>Continue with </span>
-          <FaApple />
-        </div>
-      </div>
-
-      <div className="pTag">
-        <p>OR</p>
-      </div>
-      <div>
-        <form>
-          <div className="inputWrapper">
-            <label htmlFor="userName">
-              User Name
-              <input
-                onChange={inputFunc}
-                type="text"
-                name="userName"
-                placeholder="Enter Your Name"
-              />
-            </label>
+        <div className="iconWrapper">
+          <div className="icon">
+            <span>Continue with </span>
+            <FaGoogle />
           </div>
-
-          <div className="inputWrapper">
-            <label htmlFor="password">
-              Password
-              <input
-                onChange={inputFunc}
-                type="password"
-                name="password"
-                placeholder="Enter Your Password"
-              />
-            </label>
+          <div className="icon">
+            <span>Continue with </span>
+            <FaFacebook />
           </div>
-
-          <button onClick={SignInHandler} className="SignUpBTN">
-            Sign In
-          </button>
-        </form>
-      </div>
-      {isPending && (
-        <div className="loaderContainer">
-          <h2>
-            <BarLoader color="#EBCD23" />
-          </h2>
+          <div className="icon">
+            <span>Continue with </span>
+            <FaApple />
+          </div>
         </div>
-      )}
-      {error && <h2>{error}</h2>}
-    </div>
+
+        <div className="pTag">
+          <p>OR</p>
+        </div>
+        <div>
+          <form>
+            <div className="inputWrapper">
+              <label htmlFor="userName">
+                User Name
+                <input
+                  onChange={inputFunc}
+                  type="text"
+                  name="userName"
+                  placeholder="Enter Your Name"
+                />
+              </label>
+            </div>
+
+            <div className="inputWrapper">
+              <label htmlFor="password">
+                Password
+                <input
+                  onChange={inputFunc}
+                  type="password"
+                  name="password"
+                  placeholder="Enter Your Password"
+                />
+              </label>
+            </div>
+
+            <button onClick={SignInHandler} className="SignUpBTN">
+              Sign In
+            </button>
+          </form>
+        </div>
+        {isPending && (
+          <div className="loaderContainer">
+            <h2>
+              <BarLoader color="#EBCD23" />
+            </h2>
+          </div>
+        )}
+        {error && <h2>{error}</h2>}
+      </div>
+    </section>
   );
 };
 

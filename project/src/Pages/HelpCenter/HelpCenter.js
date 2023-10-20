@@ -24,43 +24,46 @@ const HelpCenter = () => {
   };
 
   return (
-    <div className="helpCenterWrapper">
-      <h2>Help Center</h2>
-      <div className="helpCenterText">
-        <p>
-          Welcome to our Help Center! We understand that you may have questions,
-          encounter issues, or simply need guidance on how to make the most of
-          our platform. That&#39;s where our Help Center comes in.
-        </p>
-      </div>
-      <div className="helpCenterText">
-        <p>
-          This Help Center is your go-to resource for finding answers to common
-          questions, troubleshooting issues, and discovering how to navigate and
-          utilize our website effectively. Whether you&#39;re a new user just
-          getting started or a seasoned veteran looking to explore advanced
-          features, you&#39;ll find valuable information here.
-        </p>
-      </div>
+    <section>
+      <div className="helpCenterWrapper">
+        <h2>Help Center</h2>
+        <div className="helpCenterText">
+          <p>
+            Welcome to our Help Center! We understand that you may have
+            questions, encounter issues, or simply need guidance on how to make
+            the most of our platform. That&#39;s where our Help Center comes in.
+          </p>
+        </div>
+        <div className="helpCenterText">
+          <p>
+            This Help Center is your go-to resource for finding answers to
+            common questions, troubleshooting issues, and discovering how to
+            navigate and utilize our website effectively. Whether you&#39;re a
+            new user just getting started or a seasoned veteran looking to
+            explore advanced features, you&#39;ll find valuable information
+            here.
+          </p>
+        </div>
 
-      <div className="btnWrapper">
-        <button
-          className={`btn ${faqClicked && "btn-clicked"}`}
-          onClick={toggleFAQ}
-        >
-          FAQ
-        </button>
-        <button
-          className={`btn ${contactClicked && "btn-clicked"}`}
-          onClick={toggleContact}
-        >
-          Contact Us
-        </button>
-      </div>
+        <div className="btnWrapper">
+          <button
+            className={`btn ${faqClicked && "btn-clicked"}`}
+            onClick={toggleFAQ}
+          >
+            FAQ
+          </button>
+          <button
+            className={`btn ${contactClicked && "btn-clicked"}`}
+            onClick={toggleContact}
+          >
+            Contact Us
+          </button>
+        </div>
 
-      {showFAQ && <FAQ />}
-      {showContact && <ContactUs />}
-    </div>
+        {showFAQ && <FAQ />}
+        {showContact && <ContactUs />}
+      </div>
+    </section>
   );
 };
 

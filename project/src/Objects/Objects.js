@@ -25,7 +25,6 @@ export const slides = [
 // Film of the day
 export const films = [
   {
-    id: 1,
     title: "Drive My Car",
     year: "2021",
     url: "https://assets.eyefilm.nl/images/posters/_960x1392_crop_center-center_none/poster-Drive-My-Car-Ry%C3%BBsuke-Hamaguchi-JP-2021.jpg",
@@ -33,7 +32,6 @@ export const films = [
       "Two years after his wife's death, Yusuke Kafuku receives an offer to direct a play at a theater festival in Hiroshima. There, he meets Misaki, a reserved young woman assigned to be his chauffeur. As they spend time together, Kafuku starts to confront the mystery of his wife that quietly haunts him.",
   },
   {
-    id: 2,
     title: "Close",
     year: "2022",
     url: "https://icmglt.org/wp-content/uploads/2023/03/MV5BODJjYmE1ZTEtNzU0Yi00NjI3LWFjMmQtZWZkNjk2NTQxOGMwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
@@ -41,7 +39,6 @@ export const films = [
       "Thirteen-year-olds Leo and Remi are inseparable; they spend every waking moment together, playing in the flower fields and sleeping at each other’s houses. However as they start a new school year, the pressures of early adolescence challenge their bond with unexpected and far-reaching consequences.",
   },
   {
-    id: 3,
     title: "Like Father, Like Son",
     year: "2013",
     url: "https://flxt.tmsimg.com/assets/p10193332_p_v10_aa.jpg",
@@ -49,7 +46,6 @@ export const films = [
       "One day, Ryota and his wife get an unexpected phone call from the hospital. Keita, the six-year-old boy they have raised, is not their son. The news is hard to take for stern businessman Ryota. He meets his actual child, Ryusei, who has been brought up in a poorer, but more loving environment.",
   },
   {
-    id: 4,
     title: "Aftersun",
     year: "2022",
     url: "https://m.media-amazon.com/images/M/MV5BMTM3OTU0ZGUtNzYwYy00ODU3LWI3YjgtOWZlODliMmRiMWEzXkEyXkFqcGdeQXVyMTAyMjQ3NzQ1._V1_FMjpg_UX1000_.jpg",
@@ -77,5 +73,50 @@ export const festivalFilms = [
     url: "https://media.npr.org/assets/img/2023/06/08/https-__cdn.sanity.io_images_xq1bjtf4_production_e1bdf7c917e4a436ec391336e8a05dcba478d275-3840x2063_custom-8d06a6607db24746e6e697791cd638654a1f0dda.jpg",
     title: "Berlin International Film Festival",
     description: "Take a look at the feature films of Berlinale 2023.",
+  },
+];
+
+// FAQ
+export const data = [
+  {
+    id: 1,
+    title: `What is "Cinephile" all about?`,
+    content:
+      "Cinephile is a platform dedicated to providing movie enthusiasts with in-depth and honest movie reviews. Our goal is to help you make informed decisions about what to watch next.",
+  },
+  {
+    id: 2,
+    title: "How are movies reviewed on Cinephile?",
+    content:
+      "Our team of experienced and passionate movie reviewers watches and evaluates a wide range of films. We assess various aspects such as acting, plot, cinematography, and overall entertainment value. Each review is carefully crafted to offer insightful and unbiased opinions.",
+  },
+  {
+    id: 3,
+    title: "Can I request a specific movie review?",
+    content:
+      "Yes, we welcome movie review requests from our users. You can suggest a movie you'd like us to review, and we will consider it for future review publications.",
+  },
+  {
+    id: 4,
+    title: "Are the movie reviews spoiler-free?",
+    content:
+      "We strive to keep our reviews as spoiler-free as possible. You can expect a general overview of the movie's strengths and weaknesses without revealing crucial plot details. However, please be cautious when reading user comments, as spoilers may be present there.",
+  },
+  {
+    id: 5,
+    title: "How often are new movie reviews published on Cinephile?",
+    content:
+      " We aim to publish new movie reviews regularly, typically within a week of a movie's release. However, the frequency may vary based on the number of new releases and our team's availability.",
+  },
+  {
+    id: 6,
+    title: "Can I contribute as a movie reviewer for Cinephile?",
+    content: `We are always open to new contributors. If you are passionate about movies and writing, you can contact us through our "Contact" page to inquire about becoming a part of our review team.`,
+  },
+  {
+    id: 7,
+    title: "Can I share reviews from Cinephile on social media?",
+    content:
+      "Yes, you are encouraged to share reviews and movie information from our website on your social media platforms. We provide social sharing buttons to make this process easy.",
   },
 ];

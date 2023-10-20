@@ -5,7 +5,7 @@ export async function SignUpFetch(user) {
       method: "POST",
       body: JSON.stringify(user),
       headers: { "content-type": "application/json" },
-    }
+    },
   );
   if (resp.ok) {
     return await resp.json();
@@ -20,10 +20,10 @@ export async function SignInFetch(user) {
       method: "POST",
       body: JSON.stringify(user),
       headers: { "content-type": "application/json" },
-    }
+    },
   );
   if (resp.ok) {
     return await resp.json();
   }
-  throw new Error("404: The registration process failed!");
+  throw new Error("404: Invalid username or password!");
 }
