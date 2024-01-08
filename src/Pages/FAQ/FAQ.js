@@ -1,14 +1,16 @@
-import "./FAQ.css";
 import { data } from "../../Objects/Objects";
 const FAQ = () => {
   return (
     <section>
-      <div className="faqWrapper">
-        <h2>Frequently Asked Questions</h2>
-        <div className="accordion">
+      <div>
+        <h2 className="text-lg font-bold my-6">Frequently Asked Questions</h2>
+        <div className="text-secondary max-w-5xl w-full">
           {data.map((item) => (
-            <div key={item.id} className="item">
-              <h3>{item.title}</h3>
+            <div
+              key={item.id}
+              className="bg-dark py-6 px-10 leading-7 mb-6 rounded-md"
+            >
+              <h3 className="mb-4">{item.title}</h3>
               <p>{item.content}</p>
             </div>
           ))}

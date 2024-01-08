@@ -5,7 +5,6 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import Provider from "./Context/Provider";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -14,5 +13,5 @@ root.render(
         <App />
       </Provider>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

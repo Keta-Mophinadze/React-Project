@@ -16,7 +16,6 @@ const Home = () => {
           buttonText="I GOT YOU"
           buttonStyle={{
             color: "#00192a",
-            fontWeight: "900",
             width: "100px",
             height: "30px",
             background: "#EBCD23",
@@ -25,7 +24,8 @@ const Home = () => {
             borderRadius: "2px",
           }}
         >
-          We use cookies to ensure you get the best experience on our website.
+          To enhance your browsing experience, our website uses cookies. By
+          continuing to use our site, you agree to our cookie policy.
         </CookieConsent>
         <Slider />
         <FilmOfTheDay />

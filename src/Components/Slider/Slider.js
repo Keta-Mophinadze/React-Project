@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./Slider.css";
 import { slides } from "../../Objects/Objects";
 
 const Slider = () => {
@@ -23,13 +22,13 @@ const Slider = () => {
 
   return (
     <section>
-      <div className="sliderStyle">
+      <div className="h-full relative">
         <div
-          className="sliderBG"
+          className="w-full h-56 sm:h-[300px] md:h-[400px] lg:h-[600px] xl:h-[88vh] bg-cover bg-center transition-all duration-500 relative"
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
           alt={slides[currentIndex].title}
         >
-          <div className="dotWrapper">
+          <div className="flex justify-center absolute bottom-[-8px] w-full">
             {slides.map((slide, slideIndex) => (
               <div
                 onClick={() => {
@@ -42,7 +41,7 @@ const Slider = () => {
                 }}
                 role="button"
                 tabIndex={0}
-                className="dots"
+                className="cursor-pointer text-4xl md:text-5xl ml-4 text-secondary"
                 key={slideIndex}
                 aria-label={`Slide ${slideIndex + 1}`}
               >

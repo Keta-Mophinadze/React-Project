@@ -8,6 +8,7 @@ module.exports = {
         accent: "#EBCD23",
         dark: "#001321",
         hover: "#d3b81f",
+        input: "#a6a6a6",
       },
       screens: {
         sm: "480px",

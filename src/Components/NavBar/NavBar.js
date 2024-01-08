@@ -1,50 +1,91 @@
 import { NavLink } from "react-router-dom";
 import Path from "../../Constants/Path";
-import "./NavBar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useRef } from "react";
+import { useState } from "react";
 import { useAppContext } from "../../Context/Provider";
 
 const NavBar = () => {
-  const navRef = useRef();
   const {
     state: { isUserLoggedIn },
   } = useAppContext();
 
-  const showNavBar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+  const [navVisible, setNavVisible] = useState(false);
+  const toggleNav = () => {
+    setNavVisible(!navVisible);
   };
+
+  const closeNav = () => {
+    setNavVisible(false);
+  };
+
   return (
     <header>
-      <div className="headerWrapper">
-        <h2>Cinephile</h2>
-        <nav ref={navRef} className="nav">
-          <NavLink className={"navLink"} to={Path.Home}>
+      <div className="flex justify-between items-center p-8 text-secondary">
+        <NavLink
+          className="text-xl border-b-2 border-accent tracking-wider"
+          to={Path.Home}
+        >
+          Cinephile
+        </NavLink>
+
+        <nav
+          className={`${
+            navVisible
+              ? "flex flex-col justify-center items-center fixed top-0 left-0 w-full h-screen bg-primary z-20 transition duration-500 ease-in-out"
+              : "hidden"
+          } md:flex max-w-3xl w-full justify-end items-center gap-x-8 text-lg tracking-wider`}
+        >
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-accent hover:text-accent" : "hover:text-accent"
+            }
+            to={Path.Home}
+            onClick={closeNav}
+          >
             Home
           </NavLink>
-          <NavLink className={"navLink"} to={Path.Review}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-accent hover:text-accent" : "hover:text-accent"
+            }
+            to={Path.Review}
+            onClick={closeNav}
+          >
             Review
           </NavLink>
-          <NavLink className={"navLink"} to={Path.Help_Center}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-accent hover:text-accent" : "hover:text-accent"
+            }
+            to={Path.Help_Center}
+            onClick={closeNav}
+          >
             Help
           </NavLink>
           {!isUserLoggedIn && (
-            <NavLink className={"navLink"} to={Path.Sign_Up}>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-accent hover:text-accent" : "hover:text-accent"
+              }
+              to={Path.Sign_Up}
+            >
               Sign Up
             </NavLink>
           )}
-
           {isUserLoggedIn && (
-            <NavLink className={"navLink"} to={Path.Sign_Out}>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-accent hover:text-accent" : "hover:text-accent"
+              }
+              to={Path.Sign_Out}
+              onClick={closeNav}
+            >
               Sign Out
             </NavLink>
           )}
-          <button className="nav-btn nav-close-btn" onClick={showNavBar}>
-            <FaTimes />
-          </button>
         </nav>
-        <button className="nav-btn" onClick={showNavBar}>
-          <FaBars />
+        <button className="md:hidden text-lg z-30" onClick={toggleNav}>
+          {navVisible ? <FaTimes /> : <FaBars />}
         </button>
       </div>
     </header>
