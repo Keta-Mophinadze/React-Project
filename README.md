@@ -1,17 +1,17 @@
 # React Cinema Website
 A cinema-focused website built with the power of React and styled using TailwindCSS.
 
-## Prerequisites
+### Prerequisites
 Before you begin, ensure you have `Node.js` installed on your system.
 
-### Getting Started
+## Getting Started
 Clone this repository to your local machine or download the source code directly from the GitHub page.
 
 Install Dependencies
 ### `npm install`
 
 In the project directory, you can run:
-#### `npm start`
+### `npm start`
 
 Runs the app in the development mode.
 
