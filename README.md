@@ -14,13 +14,16 @@ In the project directory, you can run:
 #### `npm start`
 
 Runs the app in the development mode.
+
 Open `http://localhost:3000` to view it in your browser.
+
 
 Accessing the Review Page
 
 The "Review" page is accessible only to signed-in users.
 Create an account through the sign-up page for first-time access (use mock credentials).
 Sign in with your account credentials to access the "Review" page.
+
 
 Note
 
